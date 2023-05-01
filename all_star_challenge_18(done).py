@@ -7,6 +7,6 @@ def str_count(strng, letter):
     return l_count
 
 
-print(str_count('', '2'))
+print(str_count('', '1'))
 
 #Done!!!
