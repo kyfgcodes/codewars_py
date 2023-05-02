@@ -9,15 +9,15 @@ For example, the string "This website is for losers LOL!" would become "Ths wbst
 Note: for this kata y isn't considered a vowel.'''
 
 def disemvowel(string_):
-    vowel = ['a', 'e', 'i', 'o', 'u'
-             'A', 'E', 'I', 'O', 'U']
-    string = []
-    for i in string_:
-       string.append(i)
+    string = string_.lower()
+    vowel = ['a', 'e', 'i', 'o', 'u']
+    no_vowels = ''
     for i in string:
-        if i in vowel:
-            string.remove(i)
-    return ''.join(string)
+        if i not in vowel:
+            no_vowels += i
+    return no_vowels
+        
+    
             
 print(disemvowel("This website is for losers LOL!"))
 
