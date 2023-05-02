@@ -5,11 +5,14 @@ You are provided with a list (or array) of integer pairs. Elements of each pair 
 Your task is to return the number of people who are still on the bus after the last bus stop (after the last array). Even though it is the last bus stop, the bus might not be empty and some people might still be inside the bus, they are probably sleeping there :D'''
 
 def number(bus_stops):
-    people_count = []
+    people_count = 0
     for group in bus_stops:
         for num in group:
-            sum = num[1:] + num[0]
-            people_count.append(sum)
+            people_aboard = group[0]
+            people_get_off = group[1]
+    people_count = people_aboard - people_get_off
+    return people_count
+
 
            
 
