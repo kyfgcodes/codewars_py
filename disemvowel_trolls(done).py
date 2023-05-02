@@ -10,8 +10,8 @@ Note: for this kata y isn't considered a vowel."""
 
 
 def disemvowel(string_):
-    string = string_.lower()
-    vowel = ["a", "e", "i", "o", "u"]
+    string = string_
+    vowel = ["a", "e", "i", "o", "u", 'A', 'E', 'I', 'O', 'U']
     no_vowels = ""
     for i in string:
         if i not in vowel:
@@ -21,4 +21,4 @@ def disemvowel(string_):
 
 print(disemvowel("This website is for losers LOL!"))
 
-# Struggling with this one
+#Done!!!
