@@ -4,8 +4,11 @@ def capitals(word):
     uppers = []
     for i in range(len(word)):
         if word[i].isupper():
-            uppers.append(i)
+            [i] #convert to index of capital
+            uppers.append(i) #append index
     return uppers
 
 
-print(capitals('BE'))
+print(capitals('CodEWaRs'))
+
+#Done!!!
