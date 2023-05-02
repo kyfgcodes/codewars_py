@@ -2,16 +2,18 @@
 
 
 def duplicate_encode(word):
-    new_word = []
+    word = word.lower()
+    new_str = ''
 
     for i in word:
-        if word.count(i) >= 2:
-            new_word.append(')')
-        elif word.count(i) == 1:
-            new_word.append('(')
-    return ''.join(new_word)
+        if word.count(i) == 1:
+            new_str += '('
+        else:
+            new_str += ')'
+    return new_str
 
+   
 
 print(duplicate_encode('success'))
 
-#Struggling with this one
+#Done!!!
