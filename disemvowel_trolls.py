@@ -1,4 +1,4 @@
-'''Trolls are attacking your comment section!
+"""Trolls are attacking your comment section!
 
 A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
 
@@ -6,19 +6,19 @@ Your task is to write a function that takes a string and return a new string wit
 
 For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 
-Note: for this kata y isn't considered a vowel.'''
+Note: for this kata y isn't considered a vowel."""
+
 
 def disemvowel(string_):
     string = string_.lower()
-    vowel = ['a', 'e', 'i', 'o', 'u']
-    no_vowels = ''
+    vowel = ["a", "e", "i", "o", "u"]
+    no_vowels = ""
     for i in string:
         if i not in vowel:
             no_vowels += i
     return no_vowels
-        
-    
-            
+
+
 print(disemvowel("This website is for losers LOL!"))
 
-#Struggling with this one
+# Struggling with this one
