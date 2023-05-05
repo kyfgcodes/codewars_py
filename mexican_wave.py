@@ -9,12 +9,13 @@ wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]'''
 
 def wave(people):
     wave = []
-    for letter in people:
-        capital = letter.upper()
-        wave.append(capital + people.replace(letter, ''))
-            
+    for i in people:
+        if i != ' ':
+            wave.append(people.replace(i, i.upper(),1))
+        else:
+            continue          
     return wave
 
-print(wave('hi'))
+print(wave('this i a plan'))
 
-#Still struggling 
+#Almost!!!!
