@@ -2,13 +2,9 @@
 
 
 def high_and_low(numbers):
+   numbers = numbers.replace(' ', '')
    number_list = []
-
-   if not '':
-      for i in numbers:
-         number_list.append(int(i))
-   return number_list 
-
+   return int(numbers)
       
 
 
