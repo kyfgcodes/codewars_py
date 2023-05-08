@@ -11,9 +11,7 @@ def wave(people):
     wave = []
     for i in people:
         if i != ' ':
-            wave.append(people.replace(i, i.upper(),1))
-        else:
-            continue          
+            wave.append(people.replace(i, i.upper(),1))        
     return wave
 
 print(wave('this i a plan'))
