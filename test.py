@@ -1,9 +1,18 @@
-def print_word(words):
-    repeat_words = []
-    for word in words:
-        repeat_words.append(words) #???
-    return repeat_words
-    
+def int_append(val):
 
-print(print_word('hello'))
+    num = int() #I want a value in here that is type(int)
+
+    for i in val:
+        num + int(i)
+    return num
+
+
+
+
+
+
+
+
+
+print(int_append('123'))
             

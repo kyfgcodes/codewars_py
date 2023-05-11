@@ -5,21 +5,32 @@ If the string already ends with a number, the number should be incremented by 1.
 If the string does not end with a number. the number 1 should be appended to the new string.'''
 
 def increment_string(strng):
-    if not strng.isdigit():
+    # strng = [x for x in strng]
+    # test = []
+    # for i in reversed(strng):
+    #     if i.isalpha():
+    #         break
+
+    #     test.append(i)
+
+    if not strng:
+        return '1'
+    if not strng[-1].isdigit():
         return f'{strng}1'
     
-    if not any(char.isdigit() for char in strng):
-        return f'{strng}1'
-    
-    else:
-        num = [x for x in strng if x.isdigit()]
-        add_num = int("".join(num))
-        new_str = ''.join([x for x in strng if x.isalpha()])
+    strng = ''
+    num = ''
 
-        return f'{new_str}{add_num + 1}'
-
+    for i in reversed(strng):
+        if i.isalpha():
+            break
+        num += i
     
+
+    return  num
+
+
+
+print(increment_string('foo99obar99'))
+
 #Struggling
-
-
-print(increment_string('foo001'))
