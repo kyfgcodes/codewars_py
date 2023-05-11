@@ -2,14 +2,14 @@
 
 
 def reverse_words(text):
-    text.split()
-    reversed(text)
-    
-    return text
-    # reverse = ''
-    # for i in text:
-    #     reverse += i[-1]
-    # return reverse
+    r_words = ''
+    for i in reversed(text):
+        r_words += i
+    #return r_words
 
-print(reverse_words('i am a man'))
+    reversed_words = r_words[-1::] + r_words[0::]
+
+    return reversed_words
+
+print(reverse_words('double  spaces'))
 #Struggling

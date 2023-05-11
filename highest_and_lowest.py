@@ -2,12 +2,27 @@
 
 
 def high_and_low(numbers):
-   numbers = numbers.replace(' ', '')
-   number_list = []
-   return int(numbers)
+  numbrs = []
+  for i in numbers:
+    if i != '':
+      i = int(i)
+      numbrs.append(i)
+  neg = []
+  pos = []
+  for i in numbers:
+    if i != '' and i > '0':
+      pos.append(i)
+    elif i == '-':
+      continue
+    neg.append(i)
+
+
+  return numbrs
+    
+    
       
 
 
-print(high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+print(high_and_low("6 7"))
 #Struggling with this one
     
