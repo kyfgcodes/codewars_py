@@ -20,6 +20,7 @@ def increment_string(strng):
     
     strng = ''
     num = ''
+    #Zero counter
 
     for i in reversed(strng):
         if i.isalpha():
