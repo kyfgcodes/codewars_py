@@ -20,3 +20,5 @@ def sort_by_length(arr):
 
 
 print(sort_by_length(["Telescopes", "Glasses", "Eyes", "Monocles"]))
+
+#Struggling
