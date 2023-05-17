@@ -6,7 +6,7 @@ If the string does not end with a number. the number 1 should be appended to the
 
 
 def increment_string(strng):
-    zero_counter = str(strng.count('0'))
+    zeros = ''.join([x for x in strng if x == '0'])
     if not strng:
         return '1'
     if not strng[-1].isdigit():
@@ -20,20 +20,23 @@ def increment_string(strng):
        num.append(i)
     
     str_num = (''.join([x for x in reversed(num)]))
-    new_strng = strng.replace(str_num, '')
     num = int(str_num) + 1
+    new_strng = strng.replace(str_num, '')
+   
     if num >= 10:
-        less_zero_counter = str(strng.count('0')- 1)
-        zero_fill = new_strng.zfill(len(less_zero_counter))
+        zeros = zeros.replace('0', '', 1)
+       
+        return f"{new_strng}{zeros}{num}"
+    #elif:
     else:
-        zero_fill = new_strng.zfill(len(zero_counter))
+        return f"{new_strng}{zeros}{num}"
     
     
    
-    return f'{zero_fill}{num}',  num, zero_counter
+    #return zero_fill,num  
 
 
 
-print(increment_string('foo008'))
+print(increment_string('fo99obar99'))
 
 #Struggling
