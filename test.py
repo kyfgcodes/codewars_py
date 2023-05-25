@@ -1,18 +1,19 @@
-def int_append(val):
+def increment_string(strng):
+    arrnum = []
 
-    num = int() #I want a value in here that is type(int)
+    strng = strng[::-1]
 
-    for i in val:
-        num + int(i)
-    return num
+    for i in strng:
+        if i.isdigit():
+            arrnum.append(i)
+        break
 
+    if len(arrnum) == 0:
+        return strng[::-1] + '1'
+    
+    else:
+        arrnum = arrnum[::-1]
+        strng = strng[len(arrnum):]
 
-
-
-
-
-
-
-
-print(int_append('123'))
-            
+        arrnum = str(int(''.join(arrnum))+ 1).zfill(len(arrnum))
+        return strng[::-1] + arrnum

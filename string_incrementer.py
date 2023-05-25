@@ -21,7 +21,11 @@ def increment_string(strng):
     
     str_num = (''.join([x for x in reversed(num)]))
     num = int(str_num) + 1
-    new_strng = strng.replace(str_num, '')
+    new_strng = ''
+    for i in reversed(strng):
+       if i.isalpha():
+           break
+       new_strng += i
    
     if num >= 10:
         zeros = zeros.replace('0', '', 1)
