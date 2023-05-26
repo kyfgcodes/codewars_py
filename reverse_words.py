@@ -2,14 +2,8 @@
 
 
 def reverse_words(text):
-    r_words = ''
-    for i in reversed(text):
-        r_words += i
-    #return r_words
-
-    reversed_words = r_words[-1::] + r_words[0::]
-
-    return reversed_words
+   text = text[::-1]
+   return 
 
 print(reverse_words('double  spaces'))
 #Struggling
