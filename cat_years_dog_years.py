@@ -6,31 +6,25 @@ Return their respective ages now as [humanYears,catYears,dogYears]'''
 
 
 def human_years_cat_years_dog_years(human_years):
-    animal_years = 0
-    cat_age  = 0
-    dog_age = 0
+    
     if human_years == 1:
-        cat_age = 15
-        dog_age = 15
-        return f'[{human_years},{cat_age},{dog_age}]'
+        return [1, 15, 15]
+    
     elif human_years == 2:
-        cat_age = 24
-        dog_age = 24
-        return f'[{human_years},{cat_age},{dog_age}]'
+        return [2, 24, 24]
+    
     else:
         older_cat_age =  24 
         older_dog_age = 24
-        for i in range(human_years +1):
+        for _ in range(human_years - 2):
            
-
             older_cat_age += 4
             older_dog_age += 5
 
-    return f'[{human_years},{older_cat_age},{older_dog_age}]'
-    
-#Struggling
+    return [human_years,older_cat_age,older_dog_age]
+
+print(human_years_cat_years_dog_years(4))
 
 
-print(human_years_cat_years_dog_years(10))
 
 
