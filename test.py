@@ -1,22 +1,24 @@
-def human_years_cat_years_dog_years(human_years):
-    
-    if human_years == 1:
-        return [1, 15, 15]
-    
-    elif human_years == 2:
-        return [2, 24, 24]
-    
-    else:
-        older_cat_age =  24 
-        older_dog_age = 24
-        for i in range(human_years - 2):
-           
-            older_cat_age += 4
-            older_dog_age += 5
+def warn_the_sheep(queue):
+   wolf = queue.index('wolf')
+   sheep = 0 
 
-    return f'[{human_years},{older_cat_age},{older_dog_age}]'
-    
-#Struggling
+   if wolf == -1:
+      return 'Pls go away and stop eating my sheep.'
+
+   for i in reversed(queue):
+    if i == 'wolf':
+      return f"Oi sheep number {sheep +1}! You are about to be eaten by a wolf!"
+      if i == 'sheep':
+         sheep += 1
+   
+   print(wolf)
+   # if wolf == -1:
+   #    return "Pls go away and stop eating my sheep."
+   
 
 
-print(human_years_cat_years_dog_years(10))
+
+
+
+
+print(warn_the_sheep(['sheep', 'sheep', 'sheep', 'sheep', 'sheep', 'sheep', 'wolf', 'sheep']))

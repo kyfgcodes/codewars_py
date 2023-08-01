@@ -7,3 +7,28 @@ Warn the sheep in front of the wolf that it is about to be eaten. Remember that 
 If the wolf is the closest animal to you, return "Pls go away and stop eating my sheep". Otherwise, return "Oi! Sheep number N! You are about to be eaten by a wolf!" where N is the sheep's position in the queue.'''
 
 
+def warn_the_sheep(queue):
+   wolf = queue.index('wolf')
+   sheep = 0 
+
+   if wolf == -1:
+      return 'Pls go away and stop eating my sheep.'
+
+   for i in reversed(queue):
+      if i == 'sheep':
+         sheep += 1
+   if i == 'wolf':
+      return f"Oi sheep number{sheep}! You are about to be eaten by a wolf!"
+   print(wolf)
+   # if wolf == -1:
+   #    return "Pls go away and stop eating my sheep."
+   
+
+
+
+
+
+
+print(warn_the_sheep(['sheep', 'sheep', 'sheep', 'sheep', 'sheep', 'sheep', 'sheep', 'wolf']))
+
+#Struggling
