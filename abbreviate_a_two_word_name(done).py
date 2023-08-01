@@ -11,3 +11,5 @@ def abbrev_name(name):
 
 
 print(abbrev_name('Aj Galler'))
+
+#Finished
