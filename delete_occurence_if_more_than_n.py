@@ -3,13 +3,10 @@ For example if the input number is 2, and the input list is [1,2,3,1,2,1,2,3], y
 With list [20,37,20,21] and number 1, the result would be [20,37,21].'''
 
 def delete_nth(order,max_e):
-    new_list  = []
     for i in order:
-        new_list.append(i)
-    for i in order:
-            if order.count(i) > max_e:
-               del new_list[i.index()]
-    return new_list
+        if order.count(i) != max_e:
+            order.remove(i)
+        return order
 
 
 
